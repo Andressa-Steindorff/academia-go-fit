@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ===== SEO ===== -->
+<title>Go Fit Pro | Academia no Campeche, Florianópolis</title>
+<meta name="description" content="Musculação, aulas coletivas e acompanhamento profissional no Campeche, Florianópolis. Conheça a Go Fit Pro.">
+<!-- TROQUE pelo domínio final -->
+<link rel="canonical" href="https://www.SEUDOMINIO.com.br/">
+<meta name="theme-color" content="#0B0B0B">
+
+<!-- Open Graph (WhatsApp / Instagram) -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Go Fit Pro | Academia no Campeche, Florianópolis">
+<meta property="og:description" content="Musculação, aulas coletivas e acompanhamento no Campeche.">
+<meta property="og:url" content="https://www.SEUDOMINIO.com.br/">
+<!-- INSERIR: imagem 1200x630 para compartilhamento -->
+<meta property="og:image" content="https://www.SEUDOMINIO.com.br/img/og-gofitpro.jpg">
+
+<!-- Fontes (Google Fonts) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- Tailwind via CDN (para produção, compile o CSS) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  // Paleta extraída do logo: preto + amarelo "placa de trânsito"
+  tailwind.config = { theme: { extend: {
+    colors: { ink:'#0B0B0B', panel:'#161616', gofit:'#FFD400', gofit2:'#E6BE00' },
+    fontFamily: { display:['Anton','Impact','sans-serif'], body:['Inter','system-ui','sans-serif'] }
+  }}}
+</script>
+
+<!-- Dados estruturados: SEO Local. SUBSTITUA os valores marcados com [ ] -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ExerciseGym",
+  "name": "Go Fit Pro",
+  "description": "Academia de musculação, aulas coletivas e acompanhamento profissional no Campeche, Florianópolis.",
+  "url": "https://www.SEUDOMINIO.com.br/",
+  "image": "https://www.SEUDOMINIO.com.br/img/og-gofitpro.jpg",
+  "telephone": "+55-48-[TELEFONE]",
+  "sameAs": ["https://www.instagram.com/gofitcampeche"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rod. Francisco Magno Vieira, 1499 [CONFIRMAR]",
+    "addressLocality": "Florianópolis",
+    "addressRegion": "SC",
+    "postalCode": "[CEP]",
+    "addressCountry": "BR"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": -27.6700, "longitude": -48.4900 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "06:00", "closes": "23:00" },
+    { "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday"], "opens": "08:00", "closes": "12:00" },
+    { "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Sunday"], "opens": "09:00", "closes": "12:00" }
+  ]
+}
+</script>
+
+<style>
+  html{scroll-behavior:smooth;scroll-padding-top:72px}
+  body{background:#0B0B0B;color:#fff}
+  /* Faixa diagonal inspirada na placa do logo */
+  .stripe{background:repeating-linear-gradient(135deg,#FFD400 0 14px,#0B0B0B 14px 28px)}
+  .faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s}
+  .faq-a>div{overflow:hidden}
+  .faq-open .faq-a{grid-template-rows:1fr}
+  .faq-open .plus{transform:rotate(45deg)}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+
+<body class="font-body antialiased">
+
+<!-- ===== HEADER FIXO ===== -->
+<header class="fixed top-0 inset-x-0 z-50 bg-ink/95 backdrop-blur border-b border-white/10">
+  <nav class="max-w-6xl mx-auto flex items-center justify-between px-4 h-16" aria-label="Principal">
+    <a href="#inicio" class="flex items-center gap-2">
+      <!-- Logo embutido no próprio arquivo (base64). Para trocar, substitua o src por /img/seu-logo.png -->
+      <img src="data:image/png;base64,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" alt="Logo Go Fit Pro, academia no Campeche" width="37" height="40" class="h-10 w-auto rounded-md">
+      <span class="font-display text-xl tracking-wide">GO FIT <span class="text-gofit">PRO</span></span>
+    </a>
+    <ul class="hidden md:flex gap-6 text-sm text-white/80">
+      <li><a class="hover:text-gofit" href="#modalidades">Modalidades</a></li>
+      <li><a class="hover:text-gofit" href="#estrutura">Estrutura</a></li>
+      <li><a class="hover:text-gofit" href="#depoimentos">Depoimentos</a></li>
+      <li><a class="hover:text-gofit" href="#faq">Dúvidas</a></li>
+    </ul>
+    <a href="#" data-wa="Olá! Quero conhecer a Go Fit Pro."
+       class="bg-gofit text-ink font-bold text-sm px-4 py-2.5 rounded-lg hover:bg-gofit2 transition">Fale no WhatsApp</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- ===== HERO ===== -->
+<section id="inicio" class="relative pt-28 pb-20 px-4 overflow-hidden">
+  <!-- INSERIR: vídeo/foto de alta energia (ex.: <video autoplay muted loop playsinline> ou imagem do Instagram) -->
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,212,0,.18),transparent_60%)]" aria-hidden="true"></div>
+  <div class="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <!-- ÚNICO H1 da página: começa com "Go Fit Pro no Campeche" e traz "academia" -->
+      <h1 class="font-display text-5xl md:text-7xl leading-[1.05] uppercase">
+        Go Fit Pro no <span class="text-gofit">Campeche</span>
+        <span class="block mt-3 text-2xl md:text-3xl text-white/90">Academia para quem quer resultado de verdade</span>
+      </h1>
+      <p class="mt-5 text-lg text-white/80 max-w-xl">
+        Musculação, aulas coletivas e acompanhamento de perto na academia mais animada do Campeche. Comece hoje, no seu ritmo.
+      </p>
+      <div class="mt-8 flex flex-wrap items-center gap-4">
+        <a href="#" data-wa="Olá! Quero conhecer a Go Fit Pro."
+           class="bg-gofit text-ink font-bold px-7 py-4 rounded-lg text-lg hover:bg-gofit2 transition shadow-[0_0_30px_rgba(255,212,0,.35)]">Chamar no WhatsApp →</a>
+        <a href="#modalidades" class="text-white/90 underline underline-offset-4 hover:text-gofit">Ver modalidades</a>
+      </div>
+      <!-- PROVA SOCIAL: substitua pelos números reais do Google Meu Negócio -->
+      <p class="mt-6 text-sm text-white/70"><span class="text-gofit" aria-hidden="true">★★★★★</span> [NOTA] no Google · [XXX]+ alunos treinando com a gente</p>
+    </div>
+    <div class="relative aspect-[4/5] rounded-2xl bg-panel border border-white/10 flex items-center justify-center overflow-hidden">
+      <!-- INSERIR: foto real dos alunos treinando -->
+      <img src="img/hero-treino.jpg" alt="Alunos treinando na academia Go Fit Pro no Campeche, Florianópolis" width="640" height="800" class="absolute inset-0 w-full h-full object-cover" fetchpriority="high" onerror="this.remove()">
+      <span class="font-display text-gofit text-3xl text-center px-6">GO! FIT</span>
+    </div>
+  </div>
+</section>
+<div class="stripe h-3" aria-hidden="true"></div>
+
+<!-- ===== DIFERENCIAIS / ESTRUTURA ===== -->
+<section id="estrutura" class="py-20 px-4">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="font-display text-4xl md:text-5xl uppercase">Estrutura para <span class="text-gofit">evoluir de verdade</span></h2>
+    <p class="mt-3 text-white/70 max-w-2xl">Tudo o que você precisa num só lugar. <!-- Ajuste os itens conforme a estrutura real --></p>
+    <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <article class="bg-panel border border-white/10 rounded-xl p-6 hover:border-gofit transition">
+        <div class="text-3xl" aria-hidden="true">🏋️</div>
+        <h3 class="mt-3 font-bold text-xl">Equipamentos modernos</h3>
+        <p class="mt-2 text-white/70">Musculação completa para todos os níveis, do primeiro treino à alta performance.</p>
+      </article>
+      <article class="bg-panel border border-white/10 rounded-xl p-6 hover:border-gofit transition">
+        <div class="text-3xl" aria-hidden="true">👟</div>
+        <h3 class="mt-3 font-bold text-xl">Acompanhamento profissional</h3>
+        <p class="mt-2 text-white/70">Professores por perto, corrigindo execução e ajustando seu treino.</p>
+      </article>
+      <article class="bg-panel border border-white/10 rounded-xl p-6 hover:border-gofit transition">
+        <div class="text-3xl" aria-hidden="true">🤝</div>
+        <h3 class="mt-3 font-bold text-xl">Comunidade que acolhe</h3>
+        <p class="mt-2 text-white/70">Turmas animadas, gente de todas as idades e um ambiente sem julgamentos.</p>
+      </article>
+      <article class="bg-panel border border-white/10 rounded-xl p-6 hover:border-gofit transition">
+        <div class="text-3xl" aria-hidden="true">❄️</div>
+        <h3 class="mt-3 font-bold text-xl">Ambiente climatizado</h3>
+        <p class="mt-2 text-white/70">Conforto para treinar em qualquer época do ano. <!-- CONFIRMAR --></p>
+      </article>
+      <article class="bg-panel border border-white/10 rounded-xl p-6 hover:border-gofit transition">
+        <div class="text-3xl" aria-hidden="true">🅿️</div>
+        <h3 class="mt-3 font-bold text-xl">Estacionamento</h3>
+        <p class="mt-2 text-white/70">Facilidade para chegar e treinar sem estresse. <!-- CONFIRMAR --></p>
+      </article>
+      <article class="bg-panel border border-white/10 rounded-xl p-6 hover:border-gofit transition">
+        <div class="text-3xl" aria-hidden="true">📍</div>
+        <h3 class="mt-3 font-bold text-xl">Localização no Campeche</h3>
+        <p class="mt-2 text-white/70">Perto de você, na região do Campeche, em Florianópolis.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MODALIDADES (tabs) ===== -->
+<section id="modalidades" class="py-20 px-4 bg-panel">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="font-display text-4xl md:text-5xl uppercase">Escolha o seu <span class="text-gofit">treino</span></h2>
+    <div role="tablist" aria-label="Modalidades" class="mt-8 flex flex-wrap gap-2" id="tabs"></div>
+    <div id="tabpanel" role="tabpanel" class="mt-6 bg-ink border border-white/10 rounded-2xl p-8 min-h-[170px]"></div>
+    <!-- Ajuste a lista no array MODALIDADES (script no fim do arquivo) -->
+  </div>
+</section>
+
+<!-- ===== PROVA SOCIAL (avaliações reais do Google) ===== -->
+<section id="depoimentos" class="py-20 px-4">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="font-display text-4xl md:text-5xl uppercase">Quem treina aqui <span class="text-gofit">recomenda</span></h2>
+    <p class="mt-3 text-white/70">Avaliações reais de alunos no Google. Acompanhe a rotina no <a class="text-gofit underline" href="https://www.instagram.com/gofitcampeche" rel="noopener" target="_blank">@gofitcampeche</a>.</p>
+    <div class="mt-10 grid md:grid-cols-3 gap-5">
+      <article class="bg-panel border border-white/10 rounded-2xl p-6 flex flex-col">
+        <div class="flex items-center gap-3">
+          <div class="h-11 w-11 rounded-full flex items-center justify-center font-bold text-white" style="background:#0288D1" aria-hidden="true">M</div>
+          <div><p class="font-bold">Mariah</p><p class="text-xs text-white/50">Avaliação no Google · há 6 meses</p></div>
+        </div>
+        <p class="mt-3 text-gofit" aria-label="5 de 5 estrelas">★★★★★</p>
+        <blockquote class="mt-3 text-white/80 text-sm leading-relaxed">“Gosto muito! Frequento há anos e me sinto bem, pessoas simpáticas, os professores são muito atenciosos, tem uma variedade ampla de aparelhos e um amplo ambiente para musculação. Adoro as aulas de funcional e dança que são excelentes.”</blockquote>
+      </article>
+      <article class="bg-panel border border-white/10 rounded-2xl p-6 flex flex-col">
+        <div class="flex items-center gap-3">
+          <div class="h-11 w-11 rounded-full flex items-center justify-center font-bold text-white" style="background:#01579B" aria-hidden="true">S</div>
+          <div><p class="font-bold">Simone Soares da Costa</p><p class="text-xs text-white/50">Avaliação no Google · há 6 meses</p></div>
+        </div>
+        <p class="mt-3 text-gofit" aria-label="5 de 5 estrelas">★★★★★</p>
+        <blockquote class="mt-3 text-white/80 text-sm leading-relaxed">“Uma academia excelente para treinar no dia a dia. Professores atenciosos, garantindo um suporte adequado. Vale a pena para quem busca praticidade e foco no treino. Recomendo!”</blockquote>
+      </article>
+      <article class="bg-panel border border-white/10 rounded-2xl p-6 flex flex-col">
+        <div class="flex items-center gap-3">
+          <div class="h-11 w-11 rounded-full flex items-center justify-center font-bold text-white" style="background:#455A64" aria-hidden="true">H</div>
+          <div><p class="font-bold">Helena Cristina</p><p class="text-xs text-white/50">Avaliação no Google · há 6 meses</p></div>
+        </div>
+        <p class="mt-3 text-gofit" aria-label="5 de 5 estrelas">★★★★★</p>
+        <blockquote class="mt-3 text-white/80 text-sm leading-relaxed">“A academia é excelente! Espaço sempre limpo. A equipe é super atenciosa, profissionais qualificados e o ambiente é motivador. — recomendo de olhos fechados! 💪✨”</blockquote>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq" class="py-20 px-4">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="font-display text-4xl md:text-5xl uppercase">Dúvidas <span class="text-gofit">frequentes</span></h2>
+    <div class="mt-8 divide-y divide-white/10 border-y border-white/10" id="faq-list">
+      <div class="faq">
+        <button class="w-full flex justify-between items-center py-5 text-left font-bold" aria-expanded="false">Nunca treinei. Posso começar? <span class="plus text-gofit text-2xl transition" aria-hidden="true">+</span></button>
+        <div class="faq-a"><div><p class="pb-5 text-white/70">Pode! Você começa com orientação dos professores, no seu ritmo e sem julgamentos.</p></div></div>
+      </div>
+      <div class="faq">
+        <button class="w-full flex justify-between items-center py-5 text-left font-bold" aria-expanded="false">Como faço para começar? <span class="plus text-gofit text-2xl transition" aria-hidden="true">+</span></button>
+        <div class="faq-a"><div><p class="pb-5 text-white/70">É só chamar a gente no WhatsApp. Respondemos suas dúvidas e combinamos tudo por lá.</p></div></div>
+      </div>
+      <div class="faq">
+        <button class="w-full flex justify-between items-center py-5 text-left font-bold" aria-expanded="false">Quais modalidades vocês oferecem? <span class="plus text-gofit text-2xl transition" aria-hidden="true">+</span></button>
+        <div class="faq-a"><div><p class="pb-5 text-white/70">Musculação, funcional, jump, dança e ritmos, lutas e capoeira. [CONFIRMAR grade atual.]</p></div></div>
+      </div>
+      <div class="faq">
+        <button class="w-full flex justify-between items-center py-5 text-left font-bold" aria-expanded="false">Quais são os horários? <span class="plus text-gofit text-2xl transition" aria-hidden="true">+</span></button>
+        <div class="faq-a"><div><p class="pb-5 text-white/70">Funcionamos de segunda a sexta, das 6h às 23h; aos sábados, das 8h às 12h; e aos domingos, das 9h às 12h.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA FINAL ===== -->
+<section class="px-4 pb-20">
+  <div class="max-w-4xl mx-auto bg-gofit text-ink rounded-2xl p-10 text-center">
+    <h2 class="font-display text-4xl md:text-5xl uppercase">Venha treinar no Campeche</h2>
+    <p class="mt-3 font-medium">Chame no WhatsApp e conheça a Go Fit Pro.</p>
+    <a href="#" data-wa="Olá! Quero conhecer a Go Fit Pro." class="inline-block mt-6 bg-ink text-gofit font-bold px-8 py-4 rounded-lg hover:bg-black transition">Chamar no WhatsApp →</a>
+  </div>
+</section>
+</main>
+
+<!-- ===== RODAPÉ + MAPA ===== -->
+<footer class="bg-panel border-t border-white/10 px-4 py-14">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+    <div>
+      <h2 class="font-display text-3xl uppercase">Onde <span class="text-gofit">estamos</span></h2>
+      <address class="not-italic mt-4 text-white/80 space-y-1">
+        <!-- INSERIR: endereço exato (confirme número e CEP) -->
+        <p>Rod. Francisco Magno Vieira, 1499 [CONFIRMAR]</p>
+        <p>Campeche, Florianópolis – SC · CEP [CEP]</p>
+        <p>WhatsApp: <a class="text-gofit" href="#" data-wa="Olá! Vim pelo site da Go Fit Pro.">(48) [TELEFONE]</a></p>
+      </address>
+      <h3 class="mt-6 font-bold">Horários</h3>
+      <ul class="text-white/80 text-sm mt-2 space-y-1">
+        <li>Segunda a sexta: 06h às 23h</li>
+        <li>Sábado: 08h às 12h</li>
+        <li>Domingo: 09h às 12h</li>
+      </ul>
+      <p class="mt-6"><a class="text-gofit underline" href="https://www.instagram.com/gofitcampeche" target="_blank" rel="noopener">Instagram @gofitcampeche</a></p>
+    </div>
+    <!-- Mapa: no Google Maps, Compartilhar > Incorporar mapa, e cole o src do seu endereço -->
+    <iframe title="Mapa: Go Fit Pro no Campeche, Florianópolis" loading="lazy"
+      src="https://www.google.com/maps?q=Rod.+Francisco+Magno+Vieira+1499+Florianopolis&output=embed"
+      class="w-full h-72 rounded-xl border-0" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <p class="max-w-6xl mx-auto mt-10 text-xs text-white/50">© <span id="y"></span> Go Fit Pro · Academia no Campeche, Florianópolis/SC</p>
+</footer>
+
+<!-- Botão flutuante WhatsApp -->
+<a href="#" data-wa="Olá! Vim pelo site e quero saber mais sobre a Go Fit Pro." aria-label="Falar no WhatsApp"
+   class="fixed bottom-5 right-5 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition">
+  <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 2.1 17.8L1 23l5.3-1.4a11.8 11.8 0 0 0 5.7 1.5h0A11.8 11.8 0 0 0 20.5 3.5zM12 21.1a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.1.8.8-3-.2-.4a9.8 9.8 0 1 1 7.9 4.2zm5.4-7.3c-.3-.1-1.7-.9-2-1s-.5-.1-.7.1-.8 1-1 1.2-.4.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6a.6.6 0 0 0 0-.6l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.700 3.700 0 0 0-1.100 2.700 6.400 6.400 0 0 0 1.300 3.400 14.600 14.600 0 0 0 5.600 4.900c2.100.9 2.900.9 3.400.8a2.900 2.900 0 0 0 1.900-1.400 2.300 2.300 0 0 0 .2-1.400c-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
+
+<script>
+  // ===== CONFIG =====
+  // INSERIR: número com DDI+DDD, só dígitos (ex.: 5548999999999)
+  const WHATSAPP = "5548999999999";
+  document.querySelectorAll("[data-wa]").forEach(a => {
+    a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(a.dataset.wa);
+    a.target = "_blank"; a.rel = "noopener";
+  });
+  document.getElementById("y").textContent = new Date().getFullYear();
+
+  // ===== MODALIDADES (edite livremente) =====
+  const MODALIDADES = [
+    { n:"Musculação", t:"Ganhe força, defina o corpo e proteja suas articulações, com acompanhamento de perto." },
+    { n:"Funcional",  t:"Treino dinâmico para ganhar condicionamento, mobilidade e queimar calorias." },
+    { n:"Jump",       t:"Cardio divertido na cama elástica: baixo impacto nas articulações e muita energia." },
+    { n:"Dança e Ritmos", t:"Aulas animadas para suar sorrindo, melhorar o cardio e a coordenação." },
+    { n:"Lutas",      t:"Jiu-Jitsu e outras lutas: disciplina, defesa pessoal e condicionamento. [CONFIRMAR grade]" },
+    { n:"Capoeira",   t:"Harmonia e movimento: cultura brasileira com ginga, equilíbrio e flexibilidade." }
+  ];
+  const tabs = document.getElementById("tabs"), panel = document.getElementById("tabpanel");
+  function show(i){
+    [...tabs.children].forEach((b,j)=>{
+      const on = i===j; b.setAttribute("aria-selected", on);
+      b.className = "px-4 py-2 rounded-full text-sm font-bold border transition " +
+        (on ? "bg-gofit text-ink border-gofit" : "border-white/20 text-white/80 hover:border-gofit");
+    });
+    panel.innerHTML = '<h3 class="font-display text-3xl uppercase text-gofit"></h3><p class="mt-3 text-lg text-white/80 max-w-2xl"></p>' +
+      '<a href="#" class="inline-block mt-5 text-gofit underline">Quero experimentar →</a>';
+    panel.children[0].textContent = MODALIDADES[i].n;
+    panel.children[1].textContent = MODALIDADES[i].t;
+    const l = panel.children[2];
+    l.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent("Olá! Quero experimentar " + MODALIDADES[i].n + " na Go Fit Pro.");
+    l.target = "_blank"; l.rel = "noopener";
+  }
+  MODALIDADES.forEach((m,i)=>{
+    const b = document.createElement("button");
+    b.role = "tab"; b.textContent = m.n; b.onclick = () => show(i);
+    tabs.appendChild(b);
+  });
+  show(0);
+
+  // ===== FAQ (acordeão) =====
+  document.querySelectorAll(".faq button").forEach(btn => btn.addEventListener("click", () => {
+    const item = btn.parentElement, open = item.classList.toggle("faq-open");
+    btn.setAttribute("aria-expanded", open);
+  }));
+</script>
+</body>
+</html>
